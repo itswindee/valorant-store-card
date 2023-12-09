@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+
+body{
+    background-color: gray;
+}
+
+.cards{
+    font-family: "Oswald", sans-serif;
+    display: flex; /* this is what makes them line side by side */
+    align-items: center;
+    justify-content: center;
+}
+
+.item{
+    position: relative;
+    width: 360px;
+    height: 200px;
+    margin: 16px;
+    border: 4px solid #ffa0fd; /* this creates the boxes around each item*/
+    transition: 0.24s all ease-in-out;
+    cursor: pointer;
+}
+
+.item:after{
+    content:"";
+    position: absolute;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+/* first item colors */
+.item--clr1{
+    border-color: #F2BD3D;
+}
+
+.item--clr1::after{
+    background-color: #F2BD3D;
+}
+
+/* secpmd item colors */
+.item--clr2{
+    border-color: #F2BD3D;
+}
+
+.item--clr2::after{
+    background-color: #F2BD3D;
+}
+
+/* third item colors */
+.item--clr3{
+    border-color: #37FA66;
+}
+
+.item--clr3::after{
+    background-color: #37FA66;
+}
+
+/* fourth item colors */
+.item--clr4{
+    border-color: #F56E9B;
+}
+
+.item--clr4::after{
+    background-color: #F56E9B;
+}
+
+/* moving the price to the left side of the box */
+.price{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.name{
+    position: absolute;
+    z-index: 1;
+    bottom: 16px; /* moves text to the bottom of the box */
+    left: 16px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.product{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product img{
+    width: 500px;
+    transform:
+    translate(-35px,-20px)rotate(45deg);
+    transition: 0.24s all ease-in-out;
+    filter: drop-shadow(0px 0px 0px #00000066);
+}
+
+.item:hover.item--clr1{
+    background-color: #F2BD3D;
+}
+
+.item:hover.item--clr2{
+    background-color: #F2BD3D;
+}
+
+.item:hover.item--clr3{
+    background-color: #37FA66;
+}
+
+.item:hover.item--clr4{
+    background-color: #F56E9B;
+}
